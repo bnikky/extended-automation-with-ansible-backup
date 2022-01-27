@@ -1,0 +1,17 @@
+---
+- name: apt update
+  apt:
+    update_cache: yes
+- name: install snmpd
+  apt:
+    name: snmpd
+    state: latest
+- name: configuring snmpd conf file
+  template:
+      src: "{{ role_path }}/files/snmpd.conf"
+      dest: /etc/snmp/snmpd.conf
+
+- name: Restarting the snmp service
+  service:
+    name: snmpd
+    state: restarted    

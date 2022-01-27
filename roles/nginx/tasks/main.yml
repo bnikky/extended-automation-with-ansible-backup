@@ -1,0 +1,30 @@
+
+- name: apt update
+  apt:
+    update_cache: yes
+- name: install nginx
+  apt:
+    name: nginx
+    state: latest
+- name: installing php7.4
+  apt:
+    name: php7.4
+    state: present
+
+- name: installing php7.4-fpm package
+  apt:
+    pkg:
+      - php7.4-fpm
+- name: copy index.php
+  copy:
+    src: "{{ role_path }}/files/index.php"
+    dest: /var/www/html/index.php
+- name: upload nginx default config
+  copy:
+    src: "{{ role_path }}/files/app.conf"
+    dest: /etc/nginx/sites-available/default
+- name: enable nginx
+  service:
+    name: nginx
+    state: restarted
+
