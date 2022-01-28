@@ -11,17 +11,27 @@ Ansible Playbook are executed on a set, group and classification of hosts which 
 I have created the servers in the city cloud using the ssh key-gen and saved my keys in '~/.ssh/'.
 
 # IPs of the servers created in city cloud:
+
 devA: 10.1.0.166
+
 devB: 10.1.0.193
+
 devC: 10.1.0.200
+
 bastionET2598: 188.95.231.172
+
 haproxy: 91.106.193.56
 
 # Service-deployment-with-ansible
+
 HAproxy: 91.106.193.56
+
 BastionET2598: 188.95.231.172
+
 dev A: 10.1.0.166
+
 dev B: 10.1.0.193
+
 dev C: 10.1.0.200
 
 HAproxy acts as both UDP and TCP load balancer with the help of NGINX
