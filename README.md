@@ -15,14 +15,14 @@ devA: 10.1.0.166
 devB: 10.1.0.193
 devC: 10.1.0.200
 bastionET2598: 188.95.231.172
-devhaproxy: 91.106.193.56
+haproxy: 91.106.193.56
 
 # Service-deployment-with-ansible
-HAproxy: 103.57.74.93
-BastionET2598: 91.106.195.134
-dev A: 10.1.0.37
-dev B: 10.1.0.150
-dev C: 10.1.0.16
+HAproxy: 91.106.193.56
+BastionET2598: 188.95.231.172
+dev A: 10.1.0.166
+dev B: 10.1.0.193
+dev C: 10.1.0.200
 
 HAproxy acts as both UDP and TCP load balancer with the help of NGINX
 
